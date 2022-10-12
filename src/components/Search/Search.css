@@ -1,0 +1,17 @@
+.SearchResults {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 3fr));
+}
+
+.SearchResultCard {
+
+  display: grid;
+  color: teal;
+  font-size: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 3fr));
+  border: 3px solid teal;
+  background-color: rgb(143, 212, 212);
+  margin: 5px;
+  padding: 3px;
+  width: 45%
+}

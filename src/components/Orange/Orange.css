@@ -1,0 +1,10 @@
+.Orange {
+    background: orangered;
+    color: purple;
+    height: 50%;
+    margin-top: 50px;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }

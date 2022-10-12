@@ -1,0 +1,10 @@
+.BlueGreen {
+    background: teal;
+    height: 50%;
+    color: hotpink;
+    margin-top: 50px;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }

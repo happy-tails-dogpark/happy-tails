@@ -1,0 +1,11 @@
+.Colors {
+    height: 50%;
+    margin-top: 50px;
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: -webkit-linear-gradient(rgb(58, 20, 228), rgb(239, 135, 9));
+    background-clip: content-box;
+    -webkit-text-fill-color: green;
+  }

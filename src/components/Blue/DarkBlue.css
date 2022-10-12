@@ -1,0 +1,10 @@
+.DarkBlue {
+    background: darkblue;
+    height: 50%;
+    color:white;
+    margin-top: 50px;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }

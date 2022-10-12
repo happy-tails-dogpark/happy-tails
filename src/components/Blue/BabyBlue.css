@@ -1,0 +1,13 @@
+
+
+.BabyBlue {
+    background: lightskyblue;
+    height: 50%;
+    color: lime;
+    margin-top: 50px;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+  }
