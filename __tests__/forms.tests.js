@@ -1,6 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import { InputControl, SelectControl, 
-  TextAreaControl, CheckBox, FormButton } from './FormControl.jsx';
 
 test.skip('input control should work', async () => {
   render(
