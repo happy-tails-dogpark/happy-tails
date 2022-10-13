@@ -24,6 +24,9 @@ module.exports = {
     publicPath: '/',
   },
   devServer: {
+    proxy: {
+      '/api': 'https://api.yelp.com/v3'
+    },
     port: 7891,
     historyApiFallback: true,
   },
