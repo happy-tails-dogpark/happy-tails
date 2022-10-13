@@ -7,14 +7,16 @@ export default function ParkList() {
 
   async function fetchAndStoreParks() {
     const data = await getYelp(yelpQuery);
-
+    console.log('yup', data);
+    
     setParks(data.parks);
   }
 
   async function handleYelpSubmit(e) {
     e.preventDefault();
 
-    await fetchAndStoreParks();
+    const yelpData  = await fetchAndStoreParks();
+
     setYelpQuery('');
   }
 

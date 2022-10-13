@@ -16,6 +16,7 @@ exports.handler = async (event, context) => {
         Authorization: `Bearer ${process.env.YELP_KEY}`,
       }
     });
+    console.log('red', response.body);
     const data = await response.json();
     const json = JSON.stringify(data);
 
