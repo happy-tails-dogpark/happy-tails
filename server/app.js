@@ -22,7 +22,7 @@ app.use('/api/v1/users', require('./controllers/users'));
 app.use(require('./middleware/error'));
 
 app.get('/*', (req, res) => {
-  res.sendFile(path.resolve (__dirname + '../dist/index.html'));
+  res.sendFile(path.resolve (__dirname + '/../dist/index.html'));
 });
 
 const pool = require('./utils/pool');
