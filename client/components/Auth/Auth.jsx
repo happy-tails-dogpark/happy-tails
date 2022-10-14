@@ -8,7 +8,6 @@ export default function Auth() {
 
   return (
     <main>
-      <h1>Working??</h1>
       <Outlet />
     </main>
   );

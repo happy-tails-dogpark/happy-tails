@@ -16,6 +16,7 @@
     .NavigationContainer {
       display: none;
       justify-self: end;
+      border: 2px red;
     }
   
     @media (min-width: 700px) {
@@ -27,6 +28,8 @@
   
       .NavigationContainer {
         display: initial;
+        border: 2px red;
       }
     }
   }
+ 

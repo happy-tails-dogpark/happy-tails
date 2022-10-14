@@ -10,15 +10,15 @@
       'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat',
       'Bitstream Vera Sans Bold', 'Arial Black', sans-serif;
   
-    --header-color: #00a8c6;
-    --subheader-color: #40c0cb;
+    /* --header-color: #00a8c6; */
+    /* --subheader-color: #40c0cb;
     --offset-color: #d3dcbd;
     --color-4: #b9d660;
     --tag-color: #e4fdff;
     --light-accent-color: #e5f1bf;
     --background-color: #f9f2e7;
     --black-color: rgb(27, 42, 48);
-    --white-color: white;
+    --white-color: white; */
   
     --padding: 20px;
     --padding-half: calc(var(--padding) / 2);
@@ -42,4 +42,10 @@
     font-family: var(--label-font);
     text-transform: uppercase;
     letter-spacing: 0.04em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: white;
+    }
   }

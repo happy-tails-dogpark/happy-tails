@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../../state/UserContext';
 import { FormButton, InputControl } from '../Forms/FormControl';
 import { useForm } from '../Forms/useForm';
+import styles from './AuthForm.css';
+import booty from '../../../public/bootyimage.png';
 
 export default function AuthForm({ mode = 'signin' }) {
   const {
@@ -18,15 +20,13 @@ export default function AuthForm({ mode = 'signin' }) {
     await type.action(credentials);
   };
   const signin = {
-    prompt: 'Sign the FUCK in',
     button: 'Sign In',
     switch: {
-      prompt: 'Don\'t have an account? Create an account',
+      prompt: 'Don\'t have an account? Create one',
       link: 'signup', 
     }, action: signIn,
   };
   const signup = {
-    prompt: 'Sign the FUCK up',
     button: 'Sign Up',
     switch: {
       prompt: 'Already have an account? Sign In',
@@ -40,27 +40,35 @@ export default function AuthForm({ mode = 'signin' }) {
   const type = modes[mode];
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>{type.prompt}</h2>
-      <InputControl
-        label = "email"
-        name = "email"
-        type = "email"
-        required value = {credentials.email}
-        onChange={handleChange}
-      />
-      <InputControl
-        label = "password"
-        name = "password"
-        type = "password"
-        required value = {credentials.password}
-        onChange={handleChange}
-      />
-      <FormButton>{type.button}</FormButton>
-      <p>{error}</p>
-      <nav>
-        <Link to={type.switch.link}>{type.switch.prompt}</Link>
-      </nav>
-    </form>
+    <div className={styles.alignment}>
+      <h1>Happy Tails</h1>
+      <img className="booty" src={booty} />
+      <form className={styles.Form} onSubmit={handleSubmit}>
+        <h2>{type.prompt}</h2>
+        <InputControl
+          className={styles.InputControl}
+          placeholder = "email"
+          name = "email"
+          type = "email"
+          required value = {credentials.email}
+          onChange={handleChange}
+        />
+        <InputControl
+          className={styles.InputControl}
+          placeholder = "password"
+          name = "password"
+          type = "password"
+          required value = {credentials.password}
+          onChange={handleChange}
+        />
+        <div className={styles.Button}>
+          <FormButton className={styles.ButtonFormat}>{type.button}</FormButton>
+        </div>
+        <p>{error}</p>
+        <nav>
+          <Link to={type.switch.link}>{type.switch.prompt}</Link>
+        </nav>
+      </form>
+    </div>
   );
 }
