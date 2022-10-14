@@ -1,8 +1,9 @@
+/* eslint-disable max-len */
 import {
   BrowserRouter as Router,
   Routes,
-  Switch,
   Route,
+  Navigate,
 } from 'react-router-dom';
 import UserProvider from '../state/UserContext';
 import Auth from './Auth/Auth';
@@ -10,17 +11,18 @@ import AuthForm from './Auth/AuthForm';
 import Credits from './Credits/Credits';
 import Layout from './page/Layout';
 import ParkList from './lists/ParkList';
-import { useContext } from 'react';
+import { useState } from 'react';
 
 export default function App() {
-  const { user, setUser } = useContext();
+  const { user, setUser } = useState();
 
   return (
     <Router>
       <UserProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="auth" element={<Auth />} >
+            <Route path="auth" 
+              element={user ? <Navigate to="/search" replace /> : <Auth />} >
               <Route index element={<AuthForm mode="signin" />} />
               <Route path="signup" element={<AuthForm mode="signup" />} />
             </Route>
@@ -36,7 +38,7 @@ export default function App() {
   );
 }
 
-<Route
-  path="/login"
-  element={user ? <Navigate to="/" replace /> : <LoginStandard />}
-/>
+// <Route
+//   path="/login"
+//   element={user ? <Navigate to="/" replace /> : <LoginStandard />}
+// />

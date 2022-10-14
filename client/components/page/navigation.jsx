@@ -5,6 +5,7 @@ export default function Navigation() {
     <nav>
       <NavLink to="credits">Credits</NavLink>
       <NavLink to="search">Search</NavLink>
+      <NavLink to="auth">Auth</NavLink>
     </nav>
   );
 }
