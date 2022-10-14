@@ -1,6 +1,6 @@
 import { get, post } from './request.js';
 
-const URL = 'http://localhost:7891/auth';
+const URL = '/api/v1';
 
 export async function signUpUser(credentials) {
   const response = await post(`${URL}/signup`, credentials);
