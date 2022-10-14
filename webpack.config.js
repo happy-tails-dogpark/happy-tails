@@ -17,18 +17,21 @@ const env = Object.entries({
 
 // eslint-disable-next-line
 module.exports = {
-  entry: './src/index.jsx',
+  entry: './client/index.jsx',
   output: {
     filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, './dist'),
     publicPath: '/',
   },
   devServer: {
+    proxy: {
+      '/api': 'http://localhost:7890'
+    },
     port: 7891,
     historyApiFallback: true,
   },
   plugins: [
-    new HtmlPlugin({ template: './src/index.html' }),
+    new HtmlPlugin({ template: './client/index.html' }),
     new CleanWebpackPlugin(),
     new webpack.EnvironmentPlugin(env),
     new CopyPlugin({
