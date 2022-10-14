@@ -1,1 +1,1 @@
-web: npm start:deploy
+web: npm run start:deploy
