@@ -42,7 +42,9 @@ export default function AuthForm({ mode = 'signin' }) {
   return (
     <div className={styles.alignment}>
       <h1>Happy Tails</h1>
-      <img className="booty" src={booty} />
+      <div className={styles.photo}>
+        <img className={styles.booty} src={booty}/>
+      </div>
       <form className={styles.Form} onSubmit={handleSubmit}>
         <h2>{type.prompt}</h2>
         <InputControl

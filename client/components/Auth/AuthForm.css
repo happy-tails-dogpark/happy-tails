@@ -20,3 +20,14 @@
     color: white;
     padding: 5px;
 }
+
+.alignment img {
+    width: 125px;
+    display: flex;
+    border: 3px green;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+}
