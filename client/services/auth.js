@@ -1,6 +1,6 @@
 import { get, post } from './request.js';
 
-const URL = '/api/v1';
+const URL = '/api/v1/users';
 
 export async function signUpUser(credentials) {
   const response = await post(`${URL}/signup`, credentials);
@@ -15,7 +15,7 @@ export async function signInUser(credentials) {
 }
 
 export async function verifyUser() {
-  const response = await get(`${URL}/verify`);
+  const response = await get(`${URL}/me`);
   response.user = response.data;
   return response;
 }

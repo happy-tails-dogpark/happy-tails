@@ -14,8 +14,7 @@ export default function ParkList() {
 
   async function handleYelpSubmit(e) {
     e.preventDefault();
-
-    const yelpData  = await fetchAndStoreParks();
+    await fetchAndStoreParks();
 
     setYelpQuery('');
   }
