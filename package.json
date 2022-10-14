@@ -12,7 +12,9 @@
     "build": "webpack --devtool source-map",
     "start": "npm-run-all --parallel server webpack",
     "start:deploy": "node server/app.js",
-    "server": "nodemon server/app.js"
+    "server": "nodemon server/app.js",
+    "setup-db": "node -r dotenv/config setup-db.js",
+    "setup-heroku": "heroku run npm run setup-db"
   },
   "keywords": [],
   "author": "",

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const pool = require('../utils/pool');
 
 module.exports = class User {
@@ -43,8 +44,6 @@ module.exports = class User {
       `,
       [email]
     );
-
-    if (!rows[0]) return null;
 
     return new User(rows[0]);
   }
