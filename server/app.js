@@ -1,10 +1,17 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const hostStatic = process.env.HOST_STATIC != 'false';
 const app = express();
-
+const path = require('path');
 // Built in middleware
 app.use(express.json());
 app.use(cookieParser());
+
+if(hostStatic) {
+  const staticPath = path.resolve(__dirname + '/../dist');
+  console.log(staticPath);
+  app.use('', express.static(staticPath));
+}
 
 // App routes
 app.use('/api/v1/users', require('./controllers/users'));
