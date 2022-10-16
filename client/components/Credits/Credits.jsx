@@ -13,8 +13,8 @@ export default function Credits() {
           <div>
             Amanda
           </div>
-          <a href="" target="_blank" rel="noreferrer"><img className={styles.github} src={github} /></a>
-          <a href="" target="_blank" rel="noreferrer"><img className={styles.linkedin} src={linkedin} /></a>
+          <a href="https://github.com/amanda-hecht89" target="_blank" rel="noreferrer"><img className={styles.github} src={github} /></a>
+          <a href="https://www.linkedin.com/in/amanda-hecht/" target="_blank" rel="noreferrer"><img className={styles.linkedin} src={linkedin} /></a>
         </div>
         <div className={styles.person}>
           <div>
@@ -27,8 +27,8 @@ export default function Credits() {
           <div>
             Mariah
           </div>
-          <a href="" target="_blank" rel="noreferrer"><img className={styles.github} src={github} /></a>
-          <a href="" target="_blank" rel="noreferrer"><img className={styles.linkedin} src={linkedin} /></a>
+          <a href="https://github.com/mariahschock" target="_blank" rel="noreferrer"><img className={styles.github} src={github} /></a>
+          <a href="https://www.linkedin.com/in/mariah-schock/" target="_blank" rel="noreferrer"><img className={styles.linkedin} src={linkedin} /></a>
         </div>
       </div>
       <footer>
