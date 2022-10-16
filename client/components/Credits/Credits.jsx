@@ -3,6 +3,7 @@ import styles from './Credits.css';
 import booty from '../../../public/bootyimage.png';
 import linkedin from '../../../public/linkedin.png';
 import github from '../../../public/github.png';
+import colter from '../../../public/colter.png';
 
 export default function Credits() {
   return (
@@ -18,7 +19,7 @@ export default function Credits() {
         </div>
         <div className={styles.person}>
           <div>
-            Colter
+            <img className={styles.colter} src={colter} />
           </div>
           <a href="https://github.com/Colter-Garrison" target="_blank" rel="noreferrer"><img className={styles.github} src={github} /></a>
           <a href="https://www.linkedin.com/in/colter-garrison/" target="_blank" rel="noreferrer"><img className={styles.linkedin} src={linkedin} /></a>
