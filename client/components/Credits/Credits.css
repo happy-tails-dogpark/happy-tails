@@ -1,0 +1,31 @@
+.person {
+border: 3px solid green;
+padding: 10px;
+margin: 5px;
+}
+
+.devs {
+    background-color: rgba(137, 43, 226, 0.348);
+}
+
+.photo {
+    display: flex;
+    background-color: blue;
+}
+
+.github {
+    width: 20px;
+    padding: 2px;
+    margin-left: 12px;
+}
+
+.linkedin {
+    width: 20px;
+    padding: 2px;
+    margin-left: 15px;
+}
+
+.colter {
+    width: 80px;
+    border-radius: 50%;
+}

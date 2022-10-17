@@ -3,15 +3,13 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
 module.exports = class UserService {
-  static async create({ firstName, lastName, email, password }) {
+  static async create({ email, password }) {
     const passwordHash = await bcrypt.hash(
       password,
       Number(process.env.SALT_ROUNDS)
     );
 
-    const user = await User.insert({
-      firstName,
-      lastName,
+    const user = await User.insert({ 
       email,
       passwordHash,
     });
@@ -29,6 +27,7 @@ module.exports = class UserService {
         throw new Error('Invalid password');
 
       // creates our JWT using built in function
+      console.log('process.env.JWT_SECRET', process.env.JWT_SECRET);
       const token = jwt.sign({ ...user }, process.env.JWT_SECRET, {
         expiresIn: '1 day',
       });

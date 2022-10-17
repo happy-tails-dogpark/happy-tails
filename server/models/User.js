@@ -1,28 +1,25 @@
+/* eslint-disable max-len */
 const pool = require('../utils/pool');
 
 module.exports = class User {
   id;
-  firstName;
-  lastName;
   email;
   #passwordHash; // private class field: hides it from anything outside of this class definition
 
   constructor(row) {
     this.id = row.id;
-    this.firstName = row.first_name;
-    this.lastName = row.last_name;
     this.email = row.email;
     this.#passwordHash = row.password_hash;
   }
 
-  static async insert({ firstName, lastName, email, passwordHash }) {
+  static async insert({ email, passwordHash }) {
     const { rows } = await pool.query(
       `
-      INSERT INTO users (first_name, last_name, email, password_hash)
-      VALUES ($1, $2, $3, $4)
+      INSERT INTO users (email, password_hash)
+      VALUES ($1, $2)
       RETURNING *
     `,
-      [firstName, lastName, email, passwordHash]
+      [email, passwordHash]
     );
 
     return new User(rows[0]);
@@ -43,8 +40,6 @@ module.exports = class User {
       `,
       [email]
     );
-
-    if (!rows[0]) return null;
 
     return new User(rows[0]);
   }

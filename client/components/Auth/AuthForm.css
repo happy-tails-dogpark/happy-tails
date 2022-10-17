@@ -1,0 +1,33 @@
+.alignment {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.Form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+.InputControl {
+    padding: 10px;
+    margin: 5px;
+}
+.ButtonFormat {
+    width: 40%;
+    border-radius: 10px;
+    background-color:darkblue;
+    color: white;
+    padding: 5px;
+}
+
+.alignment img {
+    width: 125px;
+    display: flex;
+    border: 3px green;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+}
