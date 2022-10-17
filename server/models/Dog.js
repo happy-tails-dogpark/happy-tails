@@ -6,7 +6,6 @@ class Dog {
   age;
   breed;
   image;
-  user_id;
 
   constructor(row) {
     this.id = row.id;
@@ -14,7 +13,6 @@ class Dog {
     this.age = row.age;
     this.breed = row.breed;
     this.image = row.image;
-    this.user_id = row.user_id;
   }
 
   static async getAllDogs() {
@@ -30,21 +28,21 @@ class Dog {
       `
           SELECT * FROM dogs WHERE id = $1;
           `, [id]
-    ); if (rows.legnth === 0) {
+    ); if (rows.length === 0) {
       return null;
     }return new Dog(rows[0]);
   }
 
-  static async addDog({ user_id, name, age, breed, image }) {
+  static async addDog({ name, age, breed, image }) {
     const { rows } = await pool.query(
       `
-        INSERT INTO dogs (user_id, name, age, breed, image)
-        VALUES ($1, $2, $3, $4, $5)
+        INSERT INTO dogs (name, age, breed, image)
+        VALUES ($1, $2, $3, $4)
         RETURNING * 
       `,
-      [user_id, name, age, breed, image]
+      [name, age, breed, image]
     ); return new Dog(rows[0]);
   }
 }
 
-module.exports = { Dog };
+module.exports = Dog;

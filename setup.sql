@@ -9,12 +9,10 @@ CREATE TABLE users (
 
 CREATE TABLE dogs (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  user_id BIGINT,
   age VARCHAR,
   name VARCHAR,
   breed VARCHAR,
-  image VARCHAR,
-  FOREIGN KEY (user_id) REFERENCES users(id)
+  image VARCHAR
 );
 
 INSERT INTO users (email, password_hash) VALUES
@@ -22,8 +20,8 @@ INSERT INTO users (email, password_hash) VALUES
 ('amanda@gmail.com', '123456'),
 ('mariah@gmail.com', '123456');
 
-INSERT INTO dogs (user_id, age, name, breed, image) VALUES
-('1', '1', 'Ozujsko', 'mutt', 'Good dog image'),
-('2', '9', 'Arya', 'Coon Hound', 'Good girl image'),
-('2', '5', 'Boulder', 'Pit-mix', 'Good pup image'),
-('3', '0.5', 'Bruce', 'Pit-mix', 'Heckin good boy image')
+INSERT INTO dogs (age, name, breed, image) VALUES
+('1', 'Ozujsko', 'mutt', 'Good dog image'),
+('9', 'Arya', 'Coon Hound', 'Good girl image'),
+('5', 'Boulder', 'Pit-mix', 'Good pup image'),
+('0.5', 'Bruce', 'Pit-mix', 'Heckin good boy image')
