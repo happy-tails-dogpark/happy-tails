@@ -1,22 +1,16 @@
-const { Park } = require('../models/Park');
 const { Router } = require('express');
 
+const { getYelp } = require('../utils/fetch-utils');
+require('dotenv').config();
+
 module.exports = Router()
-.get('/', async (req, res, next) => {
+  .get('/', async (req, res, next) => {
     try {
-        const data = await Park.getAll();
-        res.json(data);
+      const data = await getYelp(req.query.location);
+    //   console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa', data);
+      //   JSON.stringify(data);
+      res.send(data);
     } catch (e) {
-        next(e)
+      next(e);
     }
-})
-.get('/:id', async (req, res, next) => {
-    try {
-        const data = await Park.getById(req.params.id);
-        if(!data) {
-            next();
-        } res.json(data);
-     } catch (e) {
-        next(e)
-     }
-});
+  });

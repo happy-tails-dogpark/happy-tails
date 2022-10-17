@@ -10,14 +10,12 @@ const headers = {
 
 // eslint-disable-next-line no-unused-vars
 exports.handler = async (event, context) => {
-  try {
-    console.log('teal', event.queryStringParameters.yelpQuery);
+  try { 
     const response = await fetch(`https://api.yelp.com/v3/businesses/search?term=dog_parks&location=${event.queryStringParameters.yelpQuery}`, {
       headers: {
         Authorization: `Bearer ${process.env.YELP_KEY}`,
       }
     });
-    console.log('red', response.body);
     const data = await response.json();
     const json = JSON.stringify(data);
 

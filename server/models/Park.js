@@ -32,15 +32,10 @@ class Park {
     }return new Park(rows[0]);
   }
 
-  static 
 
 
 
 
-
-
-
-
-
-} //end of class
+}
+//end of class
 module.exports = { Park };
