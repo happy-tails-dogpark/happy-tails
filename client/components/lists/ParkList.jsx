@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { getYelp } from '../../services/fetch-utils';
 
-export default function ParkList() {
+export default function ParkList() {                                        
   const [parks, setParks] = useState([]);
   const [yelpQuery, setYelpQuery] = useState('');
 
@@ -9,9 +9,9 @@ export default function ParkList() {
     const data = await getYelp(yelpQuery);
     // const yelpData = data.toString();
     setParks(data);                                     
-    console.log('parks', parks);
-    // console.log('blue', typeof yelpData);
-
+    console.log('parks', parks);                            
+    console.log('blue', data);
+                          
   }
 
   async function handleYelpSubmit(e) {
@@ -24,6 +24,7 @@ export default function ParkList() {
   // useEffect(() => {
   //   fetchAndStoreParks();
   // }, []);
+  console.log('apple', parks);
 
   return (
     <div className="park-list">

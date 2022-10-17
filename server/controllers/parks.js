@@ -7,9 +7,9 @@ module.exports = Router()
   .get('/', async (req, res, next) => {
     try {
       const data = await getYelp(req.query.location);
-    //   console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa', data);
+      //   console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa', data);
       //   JSON.stringify(data);
-      res.send(data);
+      res.json(data);
     } catch (e) {
       next(e);
     }
