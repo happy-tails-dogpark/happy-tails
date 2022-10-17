@@ -13,3 +13,19 @@ margin: 5px;
     background-color: blue;
 }
 
+.github {
+    width: 20px;
+    padding: 2px;
+    margin-left: 12px;
+}
+
+.linkedin {
+    width: 20px;
+    padding: 2px;
+    margin-left: 15px;
+}
+
+.colter {
+    width: 80px;
+    border-radius: 50%;
+}
