@@ -32,6 +32,8 @@ class Park {
     }return new Park(rows[0]);
   }
 
+  static 
+
 
 
 
