@@ -16,7 +16,7 @@ import { getLocalUser } from '../services/auth';
 import Doggo from './Doggos/Doggo';
 
 export default function App() {
-  const { user, setUser } = useState(localStorage.getItem('JWT.token'));
+  const [user, setUser] = useState(localStorage.getItem('JWT.token'));
 
   useEffect(() => {
     async function checkUser() {

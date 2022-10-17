@@ -6,6 +6,7 @@ CREATE TABLE users (
   password_hash VARCHAR NOT NULL
 );
 
+
 INSERT INTO users (email, password_hash) VALUES
 ('test@gmail.com', '123456'),
 ('test1@gmail.com', 'password')

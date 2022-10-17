@@ -16,7 +16,7 @@ if(hostStatic) {
 
 // App routes
 app.use('/api/v1/users', require('./controllers/users'));
-
+app.use('/api/v1/parks', require('./controllers/parks'));
 // Error handling & 404 middleware for when
 // a request doesn't match any app routes
 // app.use(require('./middleware/not-found'));
