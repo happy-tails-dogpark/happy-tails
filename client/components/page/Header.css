@@ -1,35 +1,39 @@
 .Header {
-    z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 7px;
+  position:initial;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding-top: 15px;
+  
+    /* z-index: 1000;
     position: sticky;
     top: 0;
     padding-right: var(--padding);
     height: var(--header-height);
   
-    background: var(--header-color);
-    color: var(--white-color);
+    background-color: white;
   
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 20px;
-    align-items: center;
+    align-items: center; */
   
-    .NavigationContainer {
-      display: none;
-      justify-self: end;
-      border: 2px red;
-    }
-  
-    @media (min-width: 700px) {
-      padding-left: var(--padding);
-  
-      .MenuContainer {
-        display: none;
-      }
-  
-      .NavigationContainer {
-        display: initial;
-        border: 2px red;
-      }
-    }
   }
- 
+  .Header h1 {
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 2em;
+  }
+  .Booty {
+    width: 30px;
+    height: 35px;
+  }
+  
+  /* @media (min-width: 700px) {
+    padding-left: var(--padding);
+  } */
+  

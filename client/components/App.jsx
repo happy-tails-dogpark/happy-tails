@@ -14,6 +14,7 @@ import ParkList from './lists/ParkList';
 import { useEffect, useState } from 'react';
 import { getLocalUser } from '../services/auth';
 import Doggo from './Doggos/Doggo';
+import DogProvider from '../state/DogContext';
 
 export default function App() {
   const [user, setUser] = useState(localStorage.getItem('JWT.token'));
@@ -39,7 +40,11 @@ export default function App() {
             <Route path="search" element={<ParkList />} />
           
             <Route path="credits" element={<Credits />} />
-            <Route path="profiles" element={<Doggo />} />
+            <Route element={<DogProvider />} >
+              <Route path="dogs">
+                <Route index element={<Doggo />} />
+              </Route>
+            </Route>
 
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />

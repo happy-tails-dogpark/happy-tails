@@ -24,6 +24,20 @@ export function InputControl({ label, required, ...rest }) {
   );
 }
 
+export function CheckBox({ legend, label, ...rest }) {
+  return (
+    <fieldset>
+      <legend>{legend}</legend>
+      <label>
+        <input type="checkbox" {...rest} />
+        {label}
+      </label>
+    </fieldset>
+  );
+}
+
+
+
 export function FormButton({ children, ...rest }) {
   return (
     <button {...rest}>{children}</button>

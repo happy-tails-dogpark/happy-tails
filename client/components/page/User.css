@@ -1,31 +1,31 @@
-.User {
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+// .User {
+//   position: relative;
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+//   gap: 5px;
 
-  button {
-    color: var(--white-color);
-    background: transparent;
-  }
+//   button {
+//     color: var(--white-color);
+//     background: transparent;
+//   }
 
-  .UserMenu {
-    position: absolute;
-    top: 100%;
-    right: calc(var(--padding) * -1);
-    background: lightsteelblue;
-    display: grid;
-    width: max-content;
-    padding: var(--padding);
-    gap: 10px;
+//   .UserMenu {
+//     position: absolute;
+//     top: 100%;
+//     right: calc(var(--padding) * -1);
+//     background: lightsteelblue;
+//     display: grid;
+//     width: max-content;
+//     padding: var(--padding);
+//     gap: 10px;
 
-    display: none;
-  }
+//     display: none;
+//   }
 
-  &.Open {
-    .UserMenu {
-      display: grid;
-    }
-  }
+//   &.Open {
+//     .UserMenu {
+//       display: grid;
+//     }
+//   }
 }
