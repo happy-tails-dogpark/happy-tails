@@ -15,7 +15,7 @@ import { useEffect, useState } from 'react';
 import { getLocalUser } from '../services/auth';
 import Doggo from './Doggos/Doggo';
 import DogProvider from '../state/DogContext';
-import DogProfile from './Doggos/DogProfile.jsx'
+import DogProfile from './Doggos/DogProfile.jsx';
 
 export default function App() {
   const [user, setUser] = useState(localStorage.getItem('JWT.token'));
@@ -36,7 +36,7 @@ export default function App() {
             <Route path="/" 
               element={user ? <Navigate to="/search" replace /> : <Auth />} >
               <Route index element={<AuthForm mode="signin" />} />
-              <Route path="signup" element={user ? <Navigate to="/search" replace /> : <Auth />}  />
+              <Route path="signup" element={<AuthForm mode="signup" />}  />
             </Route>
             <Route path="search" element={<ParkList />} />
           
@@ -57,8 +57,3 @@ export default function App() {
     </Router>
   );
 }
-
-// <Route
-//   path="/login"
-//   element={user ? <Navigate to="/" replace /> : <LoginStandard />}
-// />

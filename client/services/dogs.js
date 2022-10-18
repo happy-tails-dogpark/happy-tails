@@ -17,3 +17,7 @@ export async function createDogItem(id, dog) {
 export async function onAdd(profile) {
   return await post(`${URL}/profile`, profile);
 }
+
+export async function getDogById() {
+  return await get(`${URL}/profile`);
+}

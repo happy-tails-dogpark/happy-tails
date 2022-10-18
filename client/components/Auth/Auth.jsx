@@ -4,7 +4,7 @@ import { useUser } from '../../state/UserContext';
 export default function Auth() {
   const user = useUser();
 
-  if (user) return <Navigate to="/" />;
+  if (user) return <Navigate to="/search" />;
 
   return (
     <main>

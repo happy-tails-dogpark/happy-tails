@@ -5,7 +5,6 @@ export default function Navigation() {
   return (
     <nav className={styles.nav}>
       <NavLink to="search">Search</NavLink>
-      <NavLink to="auth">Auth</NavLink>
       <NavLink to="form">Form</NavLink>
       <NavLink to="credits">Devs</NavLink>
       <NavLink to="profile">Profile</NavLink>

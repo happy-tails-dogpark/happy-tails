@@ -10,6 +10,11 @@ module.exports = Router()
     const puppies = await Dog.getAllDogs();
     res.json(puppies);
   })
+  .get('/profile', authenticate, async (req, res) => {
+    console.log('RU', req.user);
+    const profile = await Dog.getProfileById(req.user.id);
+    res.json(profile);
+  })
   .get('/:id', async (req, res) => {
     const puppy = await Dog.getDogById(req.params.id);
     res.json(puppy);
@@ -21,4 +26,5 @@ module.exports = Router()
     } catch (e) {
       next(e);
     }
-  });
+  })
+;
