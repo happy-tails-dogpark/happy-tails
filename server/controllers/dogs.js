@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 const { Router } = require('express');
-// const authenticate = require('../middleware/authenticate');
+const authenticate = require('../middleware/authenticate');
 // const authorize = require('../middleware/authorize');
 const Dog = require('../models/Dog');
 
@@ -14,9 +14,9 @@ module.exports = Router()
     const puppy = await Dog.getDogById(req.params.id);
     res.json(puppy);
   })
-  .post('/', async (req, res, next) => {
+  .post('/profile', authenticate, async (req, res, next) => {
     try {
-      const data = await Dog.addDog(req.body);
+      const data = await Dog.addDog(req.body, req.user);
       res.json(data);
     } catch (e) {
       next(e);

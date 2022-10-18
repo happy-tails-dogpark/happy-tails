@@ -20,7 +20,7 @@ class Dog {
       `
         SELECT * FROM dogs;
         `
-    ); return rows.maps((row) => new Dog(row));
+    ); return rows.map((row) => new Dog(row));
   }
 
   static async getDogById(id) {

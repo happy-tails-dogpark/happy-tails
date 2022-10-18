@@ -3,6 +3,8 @@ import { FormButton, InputControl } from '../Forms/FormControl';
 import { useForm } from '../Forms/useForm';
 import styles from '../Auth/AuthForm.css';
 import booty from '../../../public/bootyimage.png';
+import { Navigate } from 'react-router-dom';
+import { onAdd } from '../../services/dogs';
 
 const initalData = {
   name: '',
@@ -10,7 +12,7 @@ const initalData = {
   breed: '',
 };
 
-export default function DogForm({ onAdd, ...rest }) {
+export default function DogForm({ ...rest }) {
   const [data, handleChange, reset] = useForm(initalData);
 
   const handleSubmit = async (e) => {
@@ -19,6 +21,7 @@ export default function DogForm({ onAdd, ...rest }) {
     if (qty) obj.qty = qty;
     await onAdd(obj);
     reset();
+    // <Navigate to="profile"/>;
   };
 
   return (
@@ -57,6 +60,11 @@ export default function DogForm({ onAdd, ...rest }) {
       </form>
       <div className={styles.photo}>
         <img className={styles.booty} src={booty}/>
+      </div>
+      <div>
+        {/* {data.breed} */}
+        
+
       </div>
     </div>
   );
