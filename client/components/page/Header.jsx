@@ -1,14 +1,18 @@
 import styles from './Header.css';
-import Navigation from './navigation';
+// import Navigation from './navigation';
+import SlideoutMenu from './SlideoutMenu';
 
 export default function Header() {
   return (
     <header className={styles.Header}>
-      {/* <div className={styles.MenuContainer}></div> */}
-      <div className={styles.NavigationContainer}>
-        <Navigation />
+      <div className={styles.MenuContainer}>
+        <SlideoutMenu />
       </div>
-      <h1>HAPPY TAILS</h1>
+      {/* <div className={styles.NavigationContainer}>
+        <Navigation />
+      </div> */}
+      <h1>Happy Tails</h1>
+   
       <div>Profile</div>
     </header>
   );
