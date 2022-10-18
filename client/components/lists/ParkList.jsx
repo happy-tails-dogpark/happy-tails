@@ -29,10 +29,11 @@ export default function ParkList() {
   console.log('apple', parks);
 
   return (
-    <div className="park-list">
+    <div className={styles.parkList}>
       <div className={styles.yelpList}>
         <form onSubmit={handleYelpSubmit}>
-          <input onChange={e => setYelpQuery(e.target.value)} />
+          <h2>Where are you today?</h2>
+          <input placeholder="City, State"onChange={e => setYelpQuery(e.target.value)} />
           <button>Search</button>
         </form>
         {
