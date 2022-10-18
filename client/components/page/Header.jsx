@@ -1,6 +1,7 @@
 import styles from './Header.css';
 // import Navigation from './navigation';
 import SlideoutMenu from './SlideoutMenu';
+import booty from '../../../public/bootyimage.png';
 
 export default function Header() {
   return (
@@ -13,7 +14,9 @@ export default function Header() {
       </div> */}
       <h1>Happy Tails</h1>
    
-      <div>Profile</div>
+      <div>
+        <img src={booty} className={styles.Booty} />
+      </div>
     </header>
   );
 }

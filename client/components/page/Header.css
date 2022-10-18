@@ -28,6 +28,10 @@
     font-family: 'Sansita Swashed', cursive;
     font-size: 2em;
   }
+  .Booty {
+    width: 30px;
+    height: 35px;
+  }
   
   /* @media (min-width: 700px) {
     padding-left: var(--padding);
