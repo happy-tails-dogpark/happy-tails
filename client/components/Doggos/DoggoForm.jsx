@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { FormButton, InputControl } from '../Forms/FormControl';
 import { useForm } from '../Forms/useForm';
-
+import styles from '../Auth/AuthForm.css';
 import booty from '../../../public/bootyimage.png';
 
 const initalData = {
@@ -22,11 +22,12 @@ export default function DogForm({ onAdd, ...rest }) {
   };
 
   return (
-    <div>
+    <div className={styles.alignment}>
 
-      <form onSubmit={handleSubmit}>
+      <form className={styles.Form} onSubmit={handleSubmit}>
         <InputControl
-          label="name"
+          className={styles.InputControl}
+          placeholder="name"
           name="name"
           required
           value={data.name}
@@ -34,7 +35,8 @@ export default function DogForm({ onAdd, ...rest }) {
         />
 
         <InputControl
-          label="age"
+          className={styles.InputControl}
+          placeholder="age"
           name="age"
           required
           value={data.age}
@@ -42,16 +44,19 @@ export default function DogForm({ onAdd, ...rest }) {
         />
 
         <InputControl
-          label="breed"
+          className={styles.InputControl}
+          placeholder="breed"
           name="breed"
           required
           value={data.breed}
           onChange={handleChange}    
         />
-        <FormButton>Add Doggo</FormButton>
+        <div className={styles.Button}>
+          <FormButton className={styles.ButtonFormat}>Add Doggo</FormButton>
+        </div>
       </form>
-      <div>
-        <img src={booty}/>
+      <div className={styles.photo}>
+        <img className={styles.booty} src={booty}/>
       </div>
     </div>
   );

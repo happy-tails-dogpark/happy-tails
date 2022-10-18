@@ -1,5 +1,7 @@
+/* eslint-disable max-len */
 import { useState } from 'react';
 import { getYelp } from '../../services/fetch-utils';
+import styles from './ParkList.css';
 
 export default function ParkList() {                                        
   const [parks, setParks] = useState([]);
@@ -28,15 +30,17 @@ export default function ParkList() {
 
   return (
     <div className="park-list">
-      <div className="yelp-list">
+      <div className={styles.yelpList}>
         <form onSubmit={handleYelpSubmit}>
           <input onChange={e => setYelpQuery(e.target.value)} />
           <button>Search</button>
         </form>
         {
-          parks.map((park, i) => <div className="park" key={park.name + i}>
+          parks.map((park, i) => <div className={styles.park} key={park.name + i}>
             <p>{park.name}</p>
-            <img src={park.image_url} />
+            <div className={styles.parkImage}>
+              <img src={park.image_url} />
+            </div>
           </div>)
         }
       </div>
