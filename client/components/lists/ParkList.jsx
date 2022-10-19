@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getYelp } from '../../services/fetch-utils';
 import styles from './ParkList.css';
 
@@ -10,11 +10,8 @@ export default function ParkList() {
 
   async function fetchAndStoreParks() {
     const data = await getYelp(yelpQuery);
-    // const yelpData = data.toString();
-    setParks(data);                                     
-    console.log('parks', parks);                            
-    console.log('blue', data);
-                          
+    setParks(data);  
+    console.log('park', data);                                   
   }
 
   async function handleYelpSubmit(e) {
@@ -27,8 +24,6 @@ export default function ParkList() {
   // useEffect(() => {
   //   fetchAndStoreParks();
   // }, []);
-  console.log('apple', parks);
-  // const { parkId } = useParams();
 
   return (
     <div className={styles.parkList}>
@@ -43,10 +38,8 @@ export default function ParkList() {
             <p>{park.name}</p>
             <div className={styles.parkImage}>
               <Link to={`/park/${park.id}`}>
-
                 <img src={park.image_url} />
               </Link>
-
             </div>
           </div>)
         }

@@ -11,7 +11,6 @@ module.exports = Router()
     res.json(puppies);
   })
   .get('/profile', authenticate, async (req, res) => {
-    console.log('RU', req.user);
     const profile = await Dog.getProfileById(req.user.id);
     res.json(profile);
   })

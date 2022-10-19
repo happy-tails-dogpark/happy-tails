@@ -27,7 +27,6 @@ module.exports = class UserService {
         throw new Error('Invalid password');
 
       // creates our JWT using built in function
-      console.log('process.env.JWT_SECRET', process.env.JWT_SECRET);
       const token = jwt.sign({ ...user }, process.env.JWT_SECRET, {
         expiresIn: '1 day',
       });

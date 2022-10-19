@@ -4,7 +4,7 @@ import {
 } from 'react';
 import { Outlet } from 'react-router-dom';
 import {
-  createDog, createDogItem, getDogs
+  createDog, getDogs
 } from '../services/dogs.js';
 
 const DogContext = createContext();

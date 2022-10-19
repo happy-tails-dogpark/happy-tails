@@ -15,14 +15,13 @@ const initialData = {
 
 export default function DogForm({ ...rest }) {
   const [data, handleChange, reset] = useForm(initialData);
-  console.log('Data', data);
+  console.log('data', data);
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { qty, ...obj } = data;
     if (qty) obj.qty = qty;
     const dogId = await onAdd(obj);
-    console.log('dog Id', dogId);
     reset();
     navigate('/profile');
   };

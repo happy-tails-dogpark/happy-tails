@@ -4,12 +4,10 @@ import styles from './DogProfile.css';
 
 export default function DogProfile() {
   const [dog, setDog] = useState({});
-  console.log('dog', dog);
 
   useEffect(() => {
     async function fetchDogs() {
       const response = await getDogById();
-      console.log('response', response);
       setDog(response.data);
     } fetchDogs();
   }, []
