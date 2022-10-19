@@ -9,7 +9,7 @@ export default function DogProfile() {
     async function fetchDogs() {
       const response = await getDogById();
       console.log('response', response);
-      setDog(response);
+      setDog(response.data);
     } fetchDogs();
   }, []
   );
