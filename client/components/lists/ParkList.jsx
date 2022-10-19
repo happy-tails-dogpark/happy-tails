@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getYelp } from '../../services/fetch-utils';
 import styles from './ParkList.css';
 
@@ -28,6 +28,7 @@ export default function ParkList() {
   //   fetchAndStoreParks();
   // }, []);
   console.log('apple', parks);
+  // const { parkId } = useParams();
 
   return (
     <div className={styles.parkList}>
@@ -40,11 +41,13 @@ export default function ParkList() {
         {
           parks.map((park, i) => <div className={styles.park} key={park.name + i}>
             <p>{park.name}</p>
-            <Link to={`/park/${park.id}`}>
-              <div className={styles.parkImage}>
+            <div className={styles.parkImage}>
+              <Link to={`/park/${park.id}`}>
+
                 <img src={park.image_url} />
-              </div>
-            </Link>
+              </Link>
+
+            </div>
           </div>)
         }
       </div>
