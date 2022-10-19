@@ -3,7 +3,7 @@ padding: 8px;
 margin: 8px;
 }
 
-.blurb {
+.blurb {  
     display: flex;
     flex-direction: row;
     justify-content: space-between;
