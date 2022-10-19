@@ -1,6 +1,6 @@
 import { get, post, } from './request.js';
 
-const URL = 'http://localhost:7890/api/v1/dogs';
+const URL = '/api/v1/dogs';
 
 export async function getDogs() {
   return await get(URL);
@@ -11,5 +11,13 @@ export async function createDog(dog) {
 }
 
 export async function createDogItem(id, dog) {
-  return await post(`${URL}/${id}/dogs`, dog);
+  return await post(`${URL}/${id}`, dog);
+}
+
+export async function onAdd(profile) {
+  return await post(`${URL}/profile`, profile);
+}
+
+export async function getDogById() {
+  return await get(`${URL}/profile`);
 }

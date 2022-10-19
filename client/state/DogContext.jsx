@@ -19,11 +19,11 @@ export default function DogProvider({ children }) {
       console.log(error);
     } if (data) {
       setDogs(data);
-      const map = data.reduce((map, dog) => {
-        map[dogs.id] = dog;
-        return map;
-      }, {});
-      setDogsById(map);
+      // const map = data.reduce((map, dog) => {
+      //   map[dogs.id] = dog;
+      //   return map;
+      // }, {});
+      setDogsById();
     }
   };
 

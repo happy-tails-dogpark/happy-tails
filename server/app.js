@@ -4,9 +4,21 @@ const cookieParser = require('cookie-parser');
 const hostStatic = process.env.HOST_STATIC != 'false';
 const app = express();
 const path = require('path');
+const cors = require('cors');
 // Built in middleware
 app.use(express.json());
 app.use(cookieParser());
+app.use((req, res, next) => {
+  next();
+});
+app.use(
+  cors({
+    origin: [
+      'http://localhost:7891',
+    ],
+    credentials: true,
+  })
+);
 
 if(hostStatic) {
   const staticPath = path.resolve(__dirname + '/../dist');

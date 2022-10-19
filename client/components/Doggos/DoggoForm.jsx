@@ -1,24 +1,30 @@
+/* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 import { FormButton, InputControl } from '../Forms/FormControl';
 import { useForm } from '../Forms/useForm';
 import styles from '../Auth/AuthForm.css';
 import booty from '../../../public/bootyimage.png';
+import { useNavigate } from 'react-router-dom';
+import { onAdd } from '../../services/dogs';
 
-const initalData = {
+const initialData = {
   name: '',
   age: '',
   breed: '',
 };
 
-export default function DogForm({ onAdd, ...rest }) {
-  const [data, handleChange, reset] = useForm(initalData);
-
+export default function DogForm({ ...rest }) {
+  const [data, handleChange, reset] = useForm(initialData);
+  console.log('Data', data);
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { qty, ...obj } = data;
     if (qty) obj.qty = qty;
-    await onAdd(obj);
+    const dogId = await onAdd(obj);
+    console.log('dog Id', dogId);
     reset();
+    navigate('/profile');
   };
 
   return (
@@ -57,6 +63,11 @@ export default function DogForm({ onAdd, ...rest }) {
       </form>
       <div className={styles.photo}>
         <img className={styles.booty} src={booty}/>
+      </div>
+      <div>
+        {/* {data.breed} */}
+        
+
       </div>
     </div>
   );
