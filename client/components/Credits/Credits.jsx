@@ -14,7 +14,7 @@ export default function Credits() {
         <div className={styles.person}>
           <div className={styles.blurb}>
             <img className={styles.photo} src={amanda} />
-            <p>Amanda Hecht lives in Denver, CO with her two dogs Boulder and Arya. She is a full-stack software engineer.</p>
+            <p>Amanda Hecht lives in Denver, CO with her dogs Boulder and Arya. She is a full-stack software engineer.</p>
           </div>
           <a href="https://github.com/amanda-hecht89" target="_blank" rel="noreferrer"><img className={styles.github} src={github} /></a>
           <a href="https://www.linkedin.com/in/amanda-hecht/" target="_blank" rel="noreferrer"><img className={styles.linkedin} src={linkedin} /></a>
