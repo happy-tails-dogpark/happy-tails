@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getYelp } from '../../services/fetch-utils';
 import styles from './ParkList.css';
 
@@ -39,9 +40,11 @@ export default function ParkList() {
         {
           parks.map((park, i) => <div className={styles.park} key={park.name + i}>
             <p>{park.name}</p>
-            <div className={styles.parkImage}>
-              <img src={park.image_url} />
-            </div>
+            <Link to={`/park/${park.id}`}>
+              <div className={styles.parkImage}>
+                <img src={park.image_url} />
+              </div>
+            </Link>
           </div>)
         }
       </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getDogById } from '../../services/dogs';
+import styles from './DogProfile.css';
 
 export default function DogProfile() {
   const [dog, setDog] = useState({});
@@ -15,9 +16,8 @@ export default function DogProfile() {
   );
 
   return (
-    <div>
-      <h1>DOG PROFILE</h1>
-      <p>Name: {dog.name}</p>
+    <div className={styles.Profile}>
+      <h2>Name: {dog.name}</h2>
       <p>Age: {dog.age}</p>
       <p>Breed: {dog.breed}</p>
     </div>

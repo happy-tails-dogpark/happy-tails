@@ -57,6 +57,7 @@ export default function DogForm({ ...rest }) {
           value={data.breed}
           onChange={handleChange}    
         />
+
         <div className={styles.Button}>
           <FormButton className={styles.ButtonFormat}>Add Doggo</FormButton>
         </div>
