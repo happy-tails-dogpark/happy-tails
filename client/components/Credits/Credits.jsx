@@ -5,7 +5,7 @@ import linkedin from '../../../public/linkedin.png';
 import github from '../../../public/github.png';
 import colter from '../../../public/colter.png';
 import amanda from '../../../public/amanda.png';
-import bruce from '../../../public/bruce.png';
+import mariah from '../../../public/mariah.png';
 
 export default function Credits() {
   return (
@@ -29,7 +29,7 @@ export default function Credits() {
         </div>
         <div className={styles.person}>
           <div className={styles.blurb}>
-            <img className={styles.photo} src={bruce} />
+            <img className={styles.photo} src={mariah} />
             <p>Mariah Schock lives in Sherwood, OR with her dog Bruce. She is a full-stack software engineer.</p>
           </div>
           <a href="https://github.com/mariahschock" target="_blank" rel="noreferrer"><img className={styles.github} src={github} /></a>
