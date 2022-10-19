@@ -4,29 +4,33 @@ import booty from '../../../public/bootyimage.png';
 import linkedin from '../../../public/linkedin.png';
 import github from '../../../public/github.png';
 import colter from '../../../public/colter.png';
+import amanda from '../../../public/amanda.png';
+import mariah from '../../../public/mariah.png';
 
 export default function Credits() {
   return (
     <div className={styles.page}>
-      <h1>Meet the Happy Devs</h1>
       <div className={styles.devs}>
         <div className={styles.person}>
-          <div>
-            Amanda
+          <div className={styles.blurb}>
+            <img className={styles.photo} src={amanda} />
+            <p>Amanda Hecht lives in Denver, CO with her dogs Boulder and Arya. She is a full-stack software engineer.</p>
           </div>
           <a href="https://github.com/amanda-hecht89" target="_blank" rel="noreferrer"><img className={styles.github} src={github} /></a>
           <a href="https://www.linkedin.com/in/amanda-hecht/" target="_blank" rel="noreferrer"><img className={styles.linkedin} src={linkedin} /></a>
         </div>
         <div className={styles.person}>
-          <div>
-            <img className={styles.colter} src={colter} />
+          <div className={styles.blurb}>
+            <img className={styles.photo} src={colter} />
+            <p>Colter Garrison lives in Corvallis, OR with his dog Ožujsko. He is a full-stack software engineer.</p>
           </div>
           <a href="https://github.com/Colter-Garrison" target="_blank" rel="noreferrer"><img className={styles.github} src={github} /></a>
           <a href="https://www.linkedin.com/in/colter-garrison/" target="_blank" rel="noreferrer"><img className={styles.linkedin} src={linkedin} /></a>
         </div>
         <div className={styles.person}>
-          <div>
-            Mariah
+          <div className={styles.blurb}>
+            <img className={styles.photo} src={mariah} />
+            <p>Mariah Schock lives in Sherwood, OR with her dog Bruce. She is a full-stack software engineer.</p>
           </div>
           <a href="https://github.com/mariahschock" target="_blank" rel="noreferrer"><img className={styles.github} src={github} /></a>
           <a href="https://www.linkedin.com/in/mariah-schock/" target="_blank" rel="noreferrer"><img className={styles.linkedin} src={linkedin} /></a>
