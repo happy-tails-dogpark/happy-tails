@@ -47,6 +47,7 @@ export default function App() {
             </Route>
           
             <Route path="credits" element={<Credits />} />
+            
             <Route element={<DogProvider />} >
               <Route path="form">
                 <Route index element={<Doggo />} />

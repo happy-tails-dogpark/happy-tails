@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getYelpById } from '../../services/fetch-utils';
 
 // import { getYelp } from '../../services/fetch-utils';
@@ -7,17 +7,9 @@ import { getYelpById } from '../../services/fetch-utils';
 export default function ParkDetail() {
   const [park, setPark] = useState({});
   const { id } = useParams();
-  console.log('id', id);
-  console.log('park', park);
+  // console.log('id', id);
+  // console.log('park', park);
 
-  //   async function handleFetchPark(id) {
-  //     const parks = await getYelp(id);
-  //     setPark(parks);
-  //     console.log('parks', parks);
-  //   }
-  //   useEffect(() => {
-  //     handleFetchPark();
-  //   }, []);
 
   useEffect(() => {
     async function handleFetchPark() {
@@ -32,7 +24,18 @@ export default function ParkDetail() {
     <div>
       <div>
         <h1>{park.name}</h1>
-        <p>{park.phone}</p>
+        <div>
+          <p>
+            {park.location && park.location.display_address[0]}
+            <br></br>
+            {park.location && park.location.display_address[1]}
+          </p>
+        </div>
+        <p>Rating: {park.rating}/5</p>
+        <a href = {park.url}>
+          <img src={park.image_url} height="400"/>
+        </a>
+        <p>image redirects to yelp page</p>
       </div>
     </div>
   );
