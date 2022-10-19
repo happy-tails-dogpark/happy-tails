@@ -16,6 +16,7 @@ import { getLocalUser } from '../services/auth';
 import Doggo from './Doggos/Doggo';
 import DogProvider from '../state/DogContext';
 import DogProfile from './Doggos/DogProfile.jsx';
+import ParkDetail from './lists/ParkDetail';
 
 export default function App() {
   const [user, setUser] = useState(localStorage.getItem('JWT.token'));
@@ -38,7 +39,12 @@ export default function App() {
               <Route index element={<AuthForm mode="signin" />} />
               <Route path="signup" element={<AuthForm mode="signup" />}  />
             </Route>
+
             <Route path="search" element={<ParkList />} />
+            
+            <Route path="park">
+              <Route path=":id" element={<ParkDetail />} />
+            </Route>
           
             <Route path="credits" element={<Credits />} />
             <Route element={<DogProvider />} >

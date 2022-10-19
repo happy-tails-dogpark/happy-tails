@@ -24,7 +24,6 @@ class Dog {
   }
 
   static async getDogById(id) {
-    console.log('getDogById(id)', id);
     const { rows } = await pool.query(
       `
           SELECT * FROM dogs WHERE id = $1;
@@ -36,7 +35,6 @@ class Dog {
 
   static async addDog({ name, age, breed, image }, { id }) {
     // eslint-disable-next-line max-len
-    console.log('addDog({ name, age, breed, image }, { id })', { name, age, breed, image }, { id });
     const { rows } = await pool.query(
       `
         INSERT INTO dogs (name, age, breed, image, user_id)
@@ -48,7 +46,6 @@ class Dog {
   }
 
   static async getProfileById(id) {
-    console.log('getProfileById(id)', id);
     const { rows } = await pool.query(
       `
           SELECT * FROM dogs WHERE user_id = $1;

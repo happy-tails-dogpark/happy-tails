@@ -41,7 +41,6 @@ export default function AuthForm({ mode = 'signin' }) {
 
   return (
     <div className={styles.alignment}>
-      <h1>Happy Tails</h1>
       <div className={styles.photo}>
         <img className={styles.booty} src={booty}/>
       </div>
