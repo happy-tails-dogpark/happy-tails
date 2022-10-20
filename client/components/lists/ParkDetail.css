@@ -5,6 +5,11 @@
 }
 .ParkDetail h1 {
     display: flex;
-    text-align: center;
-    font-size: 1.5em;
+    text-align: flex-start;
+    font-size: 1em;
+}
+.ParkDetail img {
+    width:300px;
+    height: 300px;
+    object-fit: contain;
 }

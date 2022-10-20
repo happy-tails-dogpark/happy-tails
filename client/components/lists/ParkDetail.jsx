@@ -26,7 +26,7 @@ export default function ParkDetail() {
       <div className={styles.ParkDetail}>
         <h1>{park.name}</h1>
         <a href = {park.url}>
-          <img src={park.image_url} height="400"/>
+          <img src={park.image_url}/>
         </a>
         <div>
           <p>

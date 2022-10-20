@@ -13,7 +13,7 @@ export default function Header() {
         <Navigation />
       </div> */}
       <h1>Happy Tails</h1>
-   
+      
       <div>
         <img src={booty} className={styles.Booty} />
       </div>
