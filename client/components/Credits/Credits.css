@@ -5,7 +5,7 @@ border: 2px solid black;
 border-radius: 10px;
 }
 
-.blurb {
+.blurb {  
     display: flex;
     flex-direction: row;
     justify-content: space-between;
