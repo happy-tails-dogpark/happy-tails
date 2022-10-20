@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
   Navigate,
@@ -30,14 +30,14 @@ export default function App() {
   );
 
   return (
-    <Router>
+    <BrowserRouter>
       <UserProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="/" element={user ? <Navigate to="/search" replace /> : <Auth />} >
-              <Route index element={<AuthForm mode="signin" />} />
-              <Route path="signup" element={<AuthForm mode="signup" />} />
-            </Route>
+            {/* <Route path="/" element={user ? <Navigate to="/search" replace /> : <Auth />} > */}
+            <Route index element={<AuthForm mode="signin" />} />
+            <Route path="signup" element={<AuthForm mode="signup" />} />
+            {/* </Route> */}
 
             <Route path="search" element={<ParkList />} />
             
@@ -47,19 +47,14 @@ export default function App() {
           
             <Route path="credits" element={<Credits />} />
             
-            <Route element={<DogProvider />} >
-              <Route path="form">
-                <Route index element={<Doggo />} />
-              </Route>
-              <Route path="profile">
-                <Route index element={<DogProfile />} />
-              </Route>
+            <Route path="dog" element={<DogProvider />} >
+              <Route index element={<Doggo />} />
+              <Route path="profile" element={<DogProfile />} />
             </Route>
-
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </UserProvider>
-    </Router>
+    </BrowserRouter>
   );
 }

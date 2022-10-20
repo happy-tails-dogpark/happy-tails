@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../state/UserContext';
 import { FormButton, InputControl } from '../Forms/FormControl';
 import { useForm } from '../Forms/useForm';
@@ -15,9 +15,13 @@ export default function AuthForm({ mode = 'signin' }) {
     email: '',
     password: '',
   });
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     await type.action(credentials);
+    if (mode === 'signup') navigate('/dog');
+    if (mode === 'signin') navigate('/search');
   };
   const signin = {
     button: 'Sign In',

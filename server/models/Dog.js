@@ -5,6 +5,7 @@ class Dog {
   name;
   age;
   breed;
+  birthday;
   image;
 
   constructor(row) {
@@ -12,6 +13,7 @@ class Dog {
     this.name = row.name;
     this.age = row.age;
     this.breed = row.breed;
+    this.birthday = row.birthday;
     this.image = row.image;
   }
 
@@ -33,15 +35,15 @@ class Dog {
     }return new Dog(rows[0]);
   }
 
-  static async addDog({ name, age, breed, image }, { id }) {
+  static async addDog({ name, age, breed, birthday, image }, { id }) {
     // eslint-disable-next-line max-len
     const { rows } = await pool.query(
       `
-        INSERT INTO dogs (name, age, breed, image, user_id)
-        VALUES ($1, $2, $3, $4, $5)
+        INSERT INTO dogs (name, age, breed, birthday, image, user_id)
+        VALUES ($1, $2, $3, $4, $5, $6)
         RETURNING * 
       `,
-      [name, age, breed, image, id]
+      [name, age, breed, birthday, image, id]
     ); return new Dog(rows[0]);
   }
 

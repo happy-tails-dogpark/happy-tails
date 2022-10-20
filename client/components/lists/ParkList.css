@@ -22,3 +22,8 @@
 input {
     margin: 10px;
 }
+
+.parkList h2 {
+    font-family: 'Sansita', sans-serif;
+    font-size: 1.3em;
+}
