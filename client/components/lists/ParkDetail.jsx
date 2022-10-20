@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getYelpById } from '../../services/fetch-utils';
+import styles from './ParkDetail.css';
 
 // import { getYelp } from '../../services/fetch-utils';
 
@@ -22,8 +23,11 @@ export default function ParkDetail() {
 
   return (
     <div>
-      <div>
+      <div className={styles.ParkDetail}>
         <h1>{park.name}</h1>
+        <a href = {park.url}>
+          <img src={park.image_url} height="400"/>
+        </a>
         <div>
           <p>
             {park.location && park.location.display_address[0]}
@@ -32,9 +36,7 @@ export default function ParkDetail() {
           </p>
         </div>
         <p>Rating: {park.rating}/5</p>
-        <a href = {park.url}>
-          <img src={park.image_url} height="400"/>
-        </a>
+        
         <p>image redirects to yelp page</p>
       </div>
     </div>

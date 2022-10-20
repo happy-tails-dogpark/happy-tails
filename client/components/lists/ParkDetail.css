@@ -1,0 +1,10 @@
+.ParkDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ParkDetail h1 {
+    display: flex;
+    text-align: center;
+    font-size: 1.5em;
+}
