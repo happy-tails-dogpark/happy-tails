@@ -64,11 +64,6 @@ export default function DogForm({ ...rest }) {
       <div className={styles.photo}>
         <img className={styles.booty} src={booty}/>
       </div>
-      <div>
-        {/* {data.breed} */}
-        
-
-      </div>
     </div>
   );
 

@@ -34,10 +34,9 @@ export default function App() {
       <UserProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="/" 
-              element={user ? <Navigate to="/search" replace /> : <Auth />} >
+            <Route path="/" element={user ? <Navigate to="/search" replace /> : <Auth />} >
               <Route index element={<AuthForm mode="signin" />} />
-              <Route path="signup" element={<AuthForm mode="signup" />}  />
+              <Route path="signup" element={<AuthForm mode="signup" />} />
             </Route>
 
             <Route path="search" element={<ParkList />} />
