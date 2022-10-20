@@ -37,7 +37,6 @@ export default function ParkDetail() {
         </div>
         <p>Rating: {park.rating}/5</p>
         
-        <p>image redirects to yelp page</p>
       </div>
     </div>
   );
