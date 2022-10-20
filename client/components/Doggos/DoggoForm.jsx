@@ -11,6 +11,7 @@ const initialData = {
   name: '',
   age: '',
   breed: '',
+  image: ''
 };
 
 export default function DogForm({ ...rest }) {
@@ -56,6 +57,16 @@ export default function DogForm({ ...rest }) {
           value={data.breed}
           onChange={handleChange}    
         />
+
+        {/* <InputControl
+          className={styles.InputControl}
+          placeholder="image"
+          name="image"
+          value={data.image}
+          onChange={handleChange}
+          type="file"
+          accept="image/png, image/jpeg, image/jpg" 
+        /> */}
 
         <div className={styles.Button}>
           <FormButton className={styles.ButtonFormat}>Add Doggo</FormButton>
