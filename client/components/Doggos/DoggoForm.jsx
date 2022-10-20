@@ -58,7 +58,7 @@ export default function DogForm({ ...rest }) {
           onChange={handleChange}    
         />
 
-        <InputControl
+        {/* <InputControl
           className={styles.InputControl}
           placeholder="image"
           name="image"
@@ -66,7 +66,7 @@ export default function DogForm({ ...rest }) {
           onChange={handleChange}
           type="file"
           accept="image/png, image/jpeg, image/jpg" 
-        />
+        /> */}
 
         <div className={styles.Button}>
           <FormButton className={styles.ButtonFormat}>Add Doggo</FormButton>
