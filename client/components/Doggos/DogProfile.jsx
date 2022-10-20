@@ -15,9 +15,11 @@ export default function DogProfile() {
 
   return (
     <div className={styles.Profile}>
+      {/* <img src={dog.image} /> */}
       <h2>Name: {dog.name}</h2>
       <p>Age: {dog.age}</p>
       <p>Breed: {dog.breed}</p>
+      <p>Birthday: {dog.birthday}</p>
     </div>
   );
 }

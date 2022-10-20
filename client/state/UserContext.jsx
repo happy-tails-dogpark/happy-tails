@@ -4,7 +4,7 @@ import {
   signInUser, 
   signUpUser, 
   storeLocalUser, 
-  verifyUser 
+  verifyUser
 } 
   from '../services/auth';
 
@@ -13,7 +13,6 @@ const UserContext = createContext();
 export default function UserProvider({ children }) {
   const localUser = getLocalUser();
   const [user, setUserState] = useState(localUser);
-    
     
   const verify = async () => {
     const response = await verifyUser();
@@ -60,7 +59,8 @@ export function useAuth() {
 
   const signUp = async (credentials) => {
     const response = await signUpUser(credentials);
-    handleResponse(response);
+    const res = handleResponse(response);
+    console.log('res', res);
   };
   const signIn = async (credentials) => {
     const response = await signInUser(credentials);
