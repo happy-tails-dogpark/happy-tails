@@ -21,9 +21,18 @@
 }
 input {
     margin: 10px;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .parkList h2 {
     font-family: 'Sansita', sans-serif;
     font-size: 1.3em;
+}
+
+.yelpList button {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.parkName {
+    font-family: 'Julius Sans One', sans-serif;
 }

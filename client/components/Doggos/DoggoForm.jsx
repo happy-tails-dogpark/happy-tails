@@ -32,7 +32,7 @@ export default function DogForm({ ...rest }) {
   return (
     <div className={format.spacing}>
       <div className={styles.alignment}>
-        <h1>Create your doggo's profile!</h1>
+        <h1 className={styles.name}>Create your doggo's profile!</h1>
         <form className={styles.Form} onSubmit={handleSubmit}>
           <InputControl
             className={styles.InputControl}

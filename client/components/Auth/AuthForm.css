@@ -12,6 +12,7 @@
 .InputControl {
     padding: 10px;
     margin: 5px;
+    font-family: 'Julius Sans One', sans-serif;
 }
 .ButtonFormat {
     width: 40%;
@@ -20,6 +21,7 @@
     color: white;
     padding: 5px;
     margin: 10px;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .alignment img {
