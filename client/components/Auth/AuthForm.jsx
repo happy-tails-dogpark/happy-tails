@@ -26,14 +26,14 @@ export default function AuthForm({ mode = 'signin' }) {
   const signin = {
     button: 'Sign In',
     switch: {
-      prompt: 'Don\'t have an account? Create one.',
+      prompt: 'Don\'t have an account? Create one',
       link: 'signup', 
     }, action: signIn,
   };
   const signup = {
     button: 'Sign Up',
     switch: {
-      prompt: 'Already have an account? Sign In.',
+      prompt: 'Already have an account? Sign In',
       link: '../', 
     }, action: signUp,
   };

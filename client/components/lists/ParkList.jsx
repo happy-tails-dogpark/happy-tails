@@ -35,7 +35,7 @@ export default function ParkList() {
         </form>
         {
           parks.map((park, i) => <div className={styles.park} key={park.name + i}>
-            <p>{park.name}</p>
+            <p className={styles.parkName}>{park.name}</p>
             <div className={styles.parkImage}>
               <Link to={`/park/${park.id}`}>
                 <img src={park.image_url} />

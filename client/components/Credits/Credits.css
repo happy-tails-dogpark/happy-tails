@@ -5,11 +5,16 @@ border: 2px solid black;
 border-radius: 10px;
 }
 
+.name {
+    font-family: 'Sansita', sans-serif;
+}
+
 .blurb {  
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .photo {

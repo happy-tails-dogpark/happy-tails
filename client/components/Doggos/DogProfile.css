@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
 .Profile {
     display: flex;
     flex-direction: column;
@@ -13,5 +15,26 @@
 
 .contain {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 30px;
 }
+
+.profileContain {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.favorites {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgba(128, 128, 128, 0.293);
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.soon {
+    margin-top: 80px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+

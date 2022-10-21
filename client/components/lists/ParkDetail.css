@@ -7,10 +7,21 @@
     display: flex;
     text-align: flex-start;
     font-size: 1em;
+    font-family: 'Sansita', sans-serif;
 }
 .ParkDetail img {
     width:300px;
     height: 300px;
     object-fit: contain;
+}
+
+.font {
+    font-family: 'Julius Sans One', sans-serif;
+    
+}
+
+.name {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 600;
 }
 

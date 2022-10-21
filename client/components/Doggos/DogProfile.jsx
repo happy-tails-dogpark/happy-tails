@@ -18,11 +18,17 @@ export default function DogProfile() {
     <div className={styles.Profile}>
       <div className={styles.contain}>
         <img className={styles.dogHead} src={dogHead} />
+        <div className={styles.profileContain}>
+          <h2>Name: {dog.name}</h2>
+          <p>Age: {dog.age}</p>
+          <p>Breed: {dog.breed}</p>
+          <p>Birthday: {dog.birthday}</p>
+        </div>
       </div>
-      <h2>Name: {dog.name}</h2>
-      <p>Age: {dog.age}</p>
-      <p>Breed: {dog.breed}</p>
-      <p>Birthday: {dog.birthday}</p>
+      <p className={styles.soon}>Favorite Parks:</p>
+      <div className={styles.favorites}>
+        <p>coming soon</p>
+      </div>
     </div>
   );
 }
