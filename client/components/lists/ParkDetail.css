@@ -13,6 +13,9 @@
     width:300px;
     height: 300px;
     object-fit: contain;
+    padding: 3px;
+    border: 2px solid black;;
+    border-radius: 10px;
 }
 
 .font {
