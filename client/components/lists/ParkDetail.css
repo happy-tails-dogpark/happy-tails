@@ -6,7 +6,7 @@
 .ParkDetail h1 {
     display: flex;
     text-align: flex-start;
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: 'Sansita', sans-serif;
 }
 .ParkDetail img {
