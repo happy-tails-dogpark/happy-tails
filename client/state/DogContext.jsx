@@ -19,10 +19,6 @@ export default function DogProvider({ children }) {
       console.log(error);
     } if (data) {
       setDogs(data);
-      // const map = data.reduce((map, dog) => {
-      //   map[dogs.id] = dog;
-      //   return map;
-      // }, {});
       setDogsById();
     }
   };
@@ -48,7 +44,6 @@ export default function DogProvider({ children }) {
     </DogContext.Provider>
   );
 }
-
 
 export function useDogs() {
   const [error, setError] = useState(null);

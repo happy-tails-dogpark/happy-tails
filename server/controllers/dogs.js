@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 const { Router } = require('express');
 const authenticate = require('../middleware/authenticate');
-// const authorize = require('../middleware/authorize');
 const Dog = require('../models/Dog');
 
 // eslint-disable-next-line no-undef

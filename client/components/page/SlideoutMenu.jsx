@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { useUser } from '../../state/UserContext';
+// import { getLocalUser } from '../../services/auth';
 import Navigation from './navigation.jsx';
 import styles from './SlideoutMenu.css';
 import classnames from 'classnames';

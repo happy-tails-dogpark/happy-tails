@@ -43,6 +43,7 @@ export function useUser() {
   const { user } = useContext(UserContext);
   return user;
 }
+
 export function useAuth() {
   const [error, setError] = useState(null);
   const { setUser } = useContext(UserContext);

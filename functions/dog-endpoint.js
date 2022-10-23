@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable max-len */
 const fetch = require('node-fetch');
 require('dotenv').config();

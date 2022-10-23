@@ -3,20 +3,14 @@ import { useParams } from 'react-router-dom';
 import { getYelpById } from '../../services/fetch-utils';
 import styles from './ParkDetail.css';
 
-// import { getYelp } from '../../services/fetch-utils';
-
 export default function ParkDetail() {
   const [park, setPark] = useState({});
   const { id } = useParams();
-  // console.log('id', id);
-  // console.log('park', park);
-
 
   useEffect(() => {
     async function handleFetchPark() {
       const parks = await getYelpById(id);
       setPark(parks);
-      console.log('parks', parks);
     }
     handleFetchPark();
   }, []);
@@ -36,7 +30,6 @@ export default function ParkDetail() {
           </p>
         </div>
         <p className={styles.font}>Rating: {park.rating}/5</p>
-        
       </div>
     </div>
   );

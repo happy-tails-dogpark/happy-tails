@@ -8,32 +8,15 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding-top: 15px;
-  
-    /* z-index: 1000;
-    position: sticky;
-    top: 0;
-    padding-right: var(--padding);
-    height: var(--header-height);
-  
-    background-color: white;
-  
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 20px;
-    align-items: center; */
-  
+  padding-top: 15px; 
   }
+
   .Header h1 {
     font-family: 'Sansita Swashed', cursive;
     font-size: 2em;
   }
+
   .Booty {
     width: 30px;
     height: 35px;
   }
-  
-  /* @media (min-width: 700px) {
-    padding-left: var(--padding);
-  } */
-  

@@ -17,6 +17,5 @@ async function getYelpById(id) {
       Authorization: `Bearer ${process.env.YELP_KEY}`,
     } });
   const data = await rawData.json();
-  console.log('data-fetch', data);
   return data;
 }

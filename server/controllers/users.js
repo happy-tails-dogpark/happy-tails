@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable max-len */
 const { Router } = require('express');
 const authenticate = require('../middleware/authenticate');

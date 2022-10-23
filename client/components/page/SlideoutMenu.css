@@ -3,17 +3,13 @@
     position: relative;
     height: var(--header-height);
     width: var(--header-height);
-  
     cursor: pointer;
     user-select: none;
-  
     border: 0;
     &:focus {
       outline: 0;
     }
-  
     background: white;
-  
     &::before {
       position: relative;
       top: -1px;
@@ -27,7 +23,7 @@
         top: 2px;
         font-size: 1.3em;
       }
-  
+      
       .MenuContainer {
         transform: translateX(0);
       }

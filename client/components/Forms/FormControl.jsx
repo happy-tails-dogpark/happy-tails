@@ -36,8 +36,6 @@ export function CheckBox({ legend, label, ...rest }) {
   );
 }
 
-
-
 export function FormButton({ children, ...rest }) {
   return (
     <button {...rest}>{children}</button>

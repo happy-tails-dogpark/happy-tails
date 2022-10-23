@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { search } from '../services/pokedex';
 import { useInView } from 'react-intersection-observer';
 
 export default function useSearchResults() {
   const [searchResults, setSearchResults] = useState([]);
-  const [error, setError] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
   const usableSearchParams = Object.fromEntries(searchParams.entries());
 
@@ -23,26 +22,11 @@ export default function useSearchResults() {
     },
   }).ref;
 
-  const searchPokedex = async (searchObj) => {
-    if (searchObj.page == null) {
-      searchObj.page = 1;
-    }
-    setSearchParams(searchObj);
-    try {
-      const body = await search(searchObj);
-      setSearchResults(body.results);
-    } catch (error) {
-      setError('Error searching pokedex ' + error.body);
-    }
-  };
-  useEffect(() => void searchPokedex(usableSearchParams), []);
-
   return {
     nextPage,
     searchParams,
     searchResults,
     setSearchResults,
-    searchPokedex,
     infiniteScrollRef,
   };
 }

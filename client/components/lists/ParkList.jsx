@@ -11,7 +11,6 @@ export default function ParkList() {
   async function fetchAndStoreParks() {
     const data = await getYelp(yelpQuery);
     setParks(data);  
-    console.log('park', data);                                   
   }
 
   async function handleYelpSubmit(e) {
@@ -20,10 +19,6 @@ export default function ParkList() {
 
     setYelpQuery('');
   }
-
-  // useEffect(() => {
-  //   fetchAndStoreParks();
-  // }, []);
 
   return (
     <div className={styles.parkList}>

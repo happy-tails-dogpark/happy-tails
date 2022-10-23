@@ -31,11 +31,6 @@ class Park {
       return null;
     }return new Park(rows[0]);
   }
-
-
-
-
-
 }
 //end of class
 module.exports = { Park };
